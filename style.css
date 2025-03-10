@@ -1,0 +1,173 @@
+:root {
+    --off-white: #F1F1EF;
+    --ocre: #C8A47E;
+    --violet: #32273B;
+
+    background-color: var(--off-white);
+}
+
+.philosopher-regular {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.philosopher-bold {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.philosopher-regular-italic {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+  
+.philosopher-bold-italic {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+  
+
+.gantari-200 {
+    font-family: "Gantari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+#Navbar {
+    width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 64px;
+}
+
+#buttons {
+    display: flex;
+    gap: 16px;
+    font-family: "Gantari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
+    padding: 12px 0px;
+    color: black;
+}
+
+a.selected {
+    border-bottom: 1px solid black;
+}
+
+button{
+    border: none;
+    padding: 16px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#main {
+    min-height: 100%;
+    padding: 24px 24px;
+}
+
+#home {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project {
+    flex: 1;
+    min-width: 50%;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 0;
+}
+
+.project>img {
+    width: 80%;
+    height: auto;
+
+    max-width: 500px;
+
+    box-shadow: 2px 2px 8px hsla(0, 0%, 50%, 0.26);
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+#title>p {
+    margin: 0;
+}
+
+#title>h3 {
+    margin: 0;
+}
+
+
+p {
+    font-family: "Gantari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 52px;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 32px;
+
+}
+
+h4 {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+
+}
+
+#content {
+    padding: 0 10%;
+    max-width: 1200px;
+}
+
+#wrapper-center {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
