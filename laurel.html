@@ -41,7 +41,7 @@
             
             <div id="split">
                 <div id="left">
-                    <div class="glide">
+                    <div id="g1" class="glide">
                         <div class="glide__track" data-glide-el="track">
                           <ul class="glide__slides">
                             <li class="glide__slide"><img src="images/persona1.png" alt=""></li>
@@ -61,10 +61,6 @@
                     </div>
                 </div>
 
-                <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-                <script>
-                    var glide = new Glide('.glide').mount()
-                </script>
                 <div id="right">
                     <p>We used three well-rounded user personas and associated empathy maps that visualized the users’ behaviors and attitudes to provide a better understanding of what our target audience would look like.</p>
                     <p>Johanna represents university students. The latter normally have many assignments and due dates, making it hard for them to balance between social life and personal goals.</p>
@@ -83,7 +79,7 @@
             </div>
     
             <h3>Design Iterations</h3>
-                <div class="glide">
+                <div id="g2" class="glide">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
                             <li class="glide__slide"><img src="images/sc1.png" alt=""></li>
@@ -108,7 +104,15 @@
 
                 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
                 <script>
-                    var glide2 = new Glide('.glide').mount()
+                    const gl1 = new Glide('#g1')
+                    const gl2 = new Glide('#g2')
+        
+                    gl1.mount();
+                    gl2.mount();
+        
+                    gl1.on('run', (e) => {
+                        gl2.go(e.direction);
+                    })
                 </script>
         </div>
     </div>
