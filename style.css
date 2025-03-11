@@ -67,7 +67,7 @@ a.selected {
     border-bottom: 1px solid black;
 }
 
-button{
+#buttons>button{
     border: none;
     padding: 16px;
 }
@@ -162,12 +162,41 @@ h4 {
 }
 
 #content {
-    padding: 0 10%;
-    max-width: 1200px;
+    width: 75vw;
 }
 
 #wrapper-center {
     display: flex;
     align-items: center;
     justify-self: center;
+}
+
+#left {
+    width: 40%;
+    flex: 2;
+}
+
+.glide__slide>img {
+    width: 100%;
+}
+
+#split {
+    display:flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#right>p {
+    margin: 0;
+    padding: 0;
+}
+
+#right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 3;
+    width: 60%;
 }

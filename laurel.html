@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <!-- Optional Theme Stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
 </head>
 <body>
     <div id="Navbar">
@@ -35,21 +39,78 @@
     
             <h3>Research</h3>
             <h4>Personas & Empathy Maps</h4>
-            <p>We used three well-rounded user personas and associated empathy maps that visualized the users’ behaviors and attitudes to provide a better understanding of what our target audience would look like.</p>
+            
             <div id="split">
-                <div id="caroussel"></div>
-                <p>Johanna, represents university students. The latter normally have many assignments and due dates, making it hard for them to balance between social life and personal goals. Henry, represents health conscious people. These people may need help managing a disability or reaching wellness goals. Both scenarios require time consuming and detailed activities that are difficult to schedule for and keep track of. Laura, represents parents. They may experience trouble managing their time between their children and careers.</p>
+                <div id="left">
+                    <div class="glide">
+                        <div class="glide__track" data-glide-el="track">
+                          <ul class="glide__slides">
+                            <li class="glide__slide"><img src="images/persona1.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/persona2.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/persona3.png" alt=""></li>
+                          </ul>
+                        </div>
+                        <div data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">&lt;</button>
+                            <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">&gt;</button>                
+                        </div>
+                        <div class="glide__bullets" data-glide-el="controls[nav]">
+                            <button class="glide__bullet" data-glide-dir="=0"></button>
+                            <button class="glide__bullet" data-glide-dir="=1"></button>
+                            <button class="glide__bullet" data-glide-dir="=2"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+                <script>
+                    var glide = new Glide('.glide').mount()
+                </script>
+                <div id="right">
+                    <p>We used three well-rounded user personas and associated empathy maps that visualized the users’ behaviors and attitudes to provide a better understanding of what our target audience would look like.</p>
+                    <p>Johanna represents university students. The latter normally have many assignments and due dates, making it hard for them to balance between social life and personal goals.</p>
+                    <p>Henry represents health conscious people. These people may need help managing a disability or reaching wellness goals. Both scenarios require time consuming and detailed activities that are difficult to schedule for and keep track of.</p>
+                    <p>Laura represents parents. They may experience trouble managing their time between their children and careers.</p>
+                </div>
+
             </div>
             <h4>Interviews</h4>
             <p>Once we determined our target audience, we conducted user interviews to learn about our intended users’ backgrounds and goals. We recruited individuals matching the university student persona and the parent persona however, we had difficulty finding someone to match the health-conscious persona. Instead, we interviewed a working professional for our third interview as an equally likely target user.</p>
             <p>There were three high-level aspects that we wanted to explore through the interviews: users’ experience with goal setting and goal achievement, opinions about goal setting and planning aspects of our app, and opinions on the accountability and motivation aspects of our product.</p>
             <p>The results of the interviews gave us some insights on which direction to take our app design to achieve highest user satisfaction and also uncovered our incorrect assumptions about users. For instance, we initially planned to incorporate a feature that allowed users to share their goal progress to external apps as we expected people to feel motivated doing so. However, the interviews revealed less interest in this feature than expected.</p>
             <div id="split">
-                <p>We used an affinity diagram to categorize the key insights from the interviews. We arrived at five main sections: features and specifications wanted in a goal setting app, current difficulties experienced with goal setting, types of goal users track or want to track, current approaches to goals setting, and concerns or comments on the sharing aspect.</p>
-                <img src="" alt="">
+                <p id="left">We used an affinity diagram to categorize the key insights from the interviews. We arrived at five main sections: features and specifications wanted in a goal setting app, current difficulties experienced with goal setting, types of goal users track or want to track, current approaches to goals setting, and concerns or comments on the sharing aspect.</p>
+                <img src="images/affinity.png" alt="" id="right">
             </div>
     
             <h3>Design Iterations</h3>
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide"><img src="images/sc1.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/sc2.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/sc4.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/sc5.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/sc6.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">&lt;</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">&gt;</button>                
+                    </div>
+                    <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <button class="glide__bullet" data-glide-dir="=0"></button>
+                        <button class="glide__bullet" data-glide-dir="=1"></button>
+                        <button class="glide__bullet" data-glide-dir="=2"></button>
+                        <button class="glide__bullet" data-glide-dir="=3"></button>
+                        <button class="glide__bullet" data-glide-dir="=4"></button>
+                    </div>
+                </div>
+
+                <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+                <script>
+                    var glide2 = new Glide('.glide').mount()
+                </script>
         </div>
     </div>
 </body>
