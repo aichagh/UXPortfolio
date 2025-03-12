@@ -159,7 +159,34 @@
             <p>In response to the results from our high-fidelity prototype evaluations, we made a number of modifications to arrive at the final iteration of our design aside from minor cosmetic and aesthetic fixes.</p>
             <p>We removed the blended navigation pattern in our design to restore navigational consistency across features. The Add Goal feature now displays its Back and Next or Done buttons in the screen header which is consistent with the New Metric feature. Also, the Next or Done buttons only appear once the user finishes entering input or appear immediately when a step is optional to give clear user feedback that a step is complete and so the user has the freedom to confirm their inputs/selections before the user can progress to the next step. Also, to align with design standards for selectable options, any single-select options in the Add Goal or New Metric feature that were previously using checkboxes have been replaced with radio buttons.</p>
             <p>Additionally, the profile icon now appears on all screens of the app (except the Add Goal feature to indicate the app is in a special state at that stage), and it replaces the home icon on the Goal Details page. To replace the functionality of the home icon, the tab bar has been updated to include a ‘Home’ option for improved user control and freedom, and also to remove features not implemented in this iteration of our prototype for more minimal design.</p>
-            <p>Some screens from the complete prototype with mentioned changes are shown below. However, a detailed walkthrough of the entire final high-fidelity prototype can be found in this video demo, here.</p>
+            <p>Some screens from the complete prototype with mentioned changes are shown below.</p>
+            <div id="center">
+                <div id="g3" class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide"><img src="images/laurel/fsc1.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc2.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc3.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc4.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc5.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc6.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc7.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc8.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc9.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc10.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc11.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc12.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc13.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc14.webp" alt=""></li>
+                            <li class="glide__slide"><img src="images/laurel/fsc15.webp" alt=""></li>
+                        </ul>
+                    </div>
+                    <div data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">&lt;</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">&gt;</button>                
+                    </div>
+                </div>
+            </div>
 
             <h3>Reflections</h3>
             <p>Working through the design thinking process we gained several insights about user assumptions and design principles.</p>
@@ -174,13 +201,11 @@
     <script>
         const gl1 = new Glide('#g1')
         const gl2 = new Glide('#g2')
+        const gl3 = new Glide('#g3')
 
         gl1.mount();
         gl2.mount();
-
-        gl1.on('run', (e) => {
-            gl2.go(e.direction);
-        })
+        gl3.mount();
     </script>
 </body>
 </html>
