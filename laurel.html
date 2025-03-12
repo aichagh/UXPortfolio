@@ -63,9 +63,11 @@
 
                 <div id="right">
                     <p>We used three well-rounded user personas and associated empathy maps that visualized the users’ behaviors and attitudes to provide a better understanding of what our target audience would look like.</p>
-                    <p>Johanna represents university students. The latter normally have many assignments and due dates, making it hard for them to balance between social life and personal goals.</p>
-                    <p>Henry represents health conscious people. These people may need help managing a disability or reaching wellness goals. Both scenarios require time consuming and detailed activities that are difficult to schedule for and keep track of.</p>
-                    <p>Laura represents parents. They may experience trouble managing their time between their children and careers.</p>
+                    <ul>
+                        <li><p>Johanna represents university students. The latter normally have many assignments and due dates, making it hard for them to balance between social life and personal goals.</p></li>
+                        <li><p>Henry represents health conscious people. These people may need help managing a disability or reaching wellness goals. Both scenarios require time consuming and detailed activities that are difficult to schedule for and keep track of.</p></li>
+                        <li><p>Laura represents parents. They may experience trouble managing their time between their children and careers.</p></li>
+                    </ul>
                 </div>
 
             </div>
@@ -73,20 +75,16 @@
             <p>Once we determined our target audience, we conducted user interviews to learn about our intended users’ backgrounds and goals. We recruited individuals matching the university student persona and the parent persona however, we had difficulty finding someone to match the health-conscious persona. Instead, we interviewed a working professional for our third interview as an equally likely target user.</p>
             <p>There were three high-level aspects that we wanted to explore through the interviews: users’ experience with goal setting and goal achievement, opinions about goal setting and planning aspects of our app, and opinions on the accountability and motivation aspects of our product.</p>
             <p>The results of the interviews gave us some insights on which direction to take our app design to achieve highest user satisfaction and also uncovered our incorrect assumptions about users. For instance, we initially planned to incorporate a feature that allowed users to share their goal progress to external apps as we expected people to feel motivated doing so. However, the interviews revealed less interest in this feature than expected.</p>
-            <div id="split">
-                <p id="left">We used an affinity diagram to categorize the key insights from the interviews. We arrived at five main sections: features and specifications wanted in a goal setting app, current difficulties experienced with goal setting, types of goal users track or want to track, current approaches to goals setting, and concerns or comments on the sharing aspect.</p>
-                <img src="images/affinity.png" alt="" id="right">
-            </div>
-    
-            <h3>Design Iterations</h3>
+            <p>We used an affinity diagram to categorize the key insights from the interviews. We arrived at five main sections: features and specifications wanted in a goal setting app, current difficulties experienced with goal setting, types of goal users track or want to track, current approaches to goals setting, and concerns or comments on the sharing aspect.</p>
+            <div id="center">
                 <div id="g2" class="glide">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
-                            <li class="glide__slide"><img src="images/sc1.png" alt=""></li>
-                            <li class="glide__slide"><img src="images/sc2.png" alt=""></li>
-                            <li class="glide__slide"><img src="images/sc4.png" alt=""></li>
-                            <li class="glide__slide"><img src="images/sc5.png" alt=""></li>
-                            <li class="glide__slide"><img src="images/sc6.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/aff1.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/aff2.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/aff3.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/aff4.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/affinity.png" alt=""></li>
                         </ul>
                     </div>
                     <div data-glide-el="controls">
@@ -101,20 +99,59 @@
                         <button class="glide__bullet" data-glide-dir="=4"></button>
                     </div>
                 </div>
+            </div>
 
-                <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-                <script>
-                    const gl1 = new Glide('#g1')
-                    const gl2 = new Glide('#g2')
-        
-                    gl1.mount();
-                    gl2.mount();
-        
-                    gl1.on('run', (e) => {
-                        gl2.go(e.direction);
-                    })
-                </script>
+    
+            <h3>Design Iterations</h3>
+            <p>As part of the ideation stage, we arrived at four features we deemed most important to explore for our app:</p>
+            <ul>
+                <li><p><b>Goal sharing</b>(sharing milestones on social media platforms)</p></li>
+                <li><p><b>Goal breakdown</b> (automatically generating subgoals)</p></li>
+                <li><p><b>Reminders</b></p></li>
+                <li><p><b>Progress tracking</b> (via metrics)</p></li>
+            </ul>
+            <p>For each feature, we drew sketches, designed a storyboard, and user flow diagrams. Below are the artifacts from the feature I personally worked one: Progress Tracking.</p>
+            <div id="gallery">
+                <img src="images/sketches.png" alt="">
+                <img src="images/storyboard.png" alt="">
+                <img src="images/flow.png" alt="">
+            </div>
+            
+            <h4>Wireframing</h4>
+            <p>The next step was for us to create our wireframes. I included the finalized wireframe we arrived at for the feature I worked on. In the process of transitioning from paper to digital, the feature was broken down into two steps for the user to choose from a list of AI suggested metrics or add a custom metric, and to choose their preferred display style. There was also the addition of a Goal Details page for the user to see the newly added information.</p>
+            <div id="wrapper-center">
+                <div id="column">
+                    <div id="row">
+                        <img src="images/sc1.png" alt="">
+                        <img src="images/sc2.png" alt="">
+                        <img src="images/sc4.png" alt="">
+                    </div>
+                    <div id="row">
+                        <img src="images/sc5.png" alt="">
+                        <img src="images/sc6.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <h4>Low-Fidelity Protoyping</h4>
+            <p>After developing our Low-Fidelity prototype, we developed a test plan to conduct two user tests of our low-fidelity prototypes. To expose our users to the entire breadth of UI for both features and to create a realistic user experience, we designed two user testing tasks surrounding a weight loss goal. These tasks provided the necessary input required to visit all screens and matched our users’ interests in setting fitness related goals mentioned in user interviews. These interviews informed our design decisions when moving onto the next step: High-Fidelity prototyping.</p>
+
+            <h4>High-Fidelity Protoyping</h4>
+            <p></p>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        const gl1 = new Glide('#g1')
+        const gl2 = new Glide('#g2')
+
+        gl1.mount();
+        gl2.mount();
+
+        gl1.on('run', (e) => {
+            gl2.go(e.direction);
+        })
+    </script>
 </body>
 </html>
