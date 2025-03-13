@@ -67,7 +67,7 @@ a.selected {
     border-bottom: 1px solid black;
 }
 
-#buttons>button{
+#buttons>a{
     border: none;
     padding: 16px;
 }
