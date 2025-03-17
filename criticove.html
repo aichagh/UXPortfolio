@@ -10,17 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.theme.min.css">
 </head>
 <body>
     <div id="Navbar">
         <div id="buttons">
-            <a href="https://www.linkedin.com/in/aicha-ghidaoui-6a59aa2b3"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/aichagh"><i class="fa-brands fa-github"></i></a>
+            <a href="about.html">About</a>
+            <a class="selected" href="projects.html">Projects</a>
         </div>
         <a id="home" href="index.html">Aicha Ghidaoui</a>
         <div id="buttons">
-            <button><i class="fa-brands fa-linkedin-in"></i></button>
-            <button><i class="fa-brands fa-github"></i></button>
+            <a href="https://www.linkedin.com/in/aicha-ghidaoui-6a59aa2b3"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/aichagh"><i class="fa-brands fa-github"></i></a>
         </div>
     </div>
 
@@ -29,7 +32,70 @@
             <h1>Criticove</h1>
     
             <h3>The project</h3>
+            <p>As amateurs of literature, my teammates an I thought to create an app that might help us review and rate our favorite reads on the go. As that already exists on the market, we extended our idea to include other types of media like movies and TV shows.</p>
+            <p>Our main focus was allowing users to keep their reviews within an intimate circle, wether that be just them or a few select friends.</p>
+
+            <h3>Research</h3>
+            <h4>Personas</h4>
+            <div id="split">
+                <div id="left">
+                    <div id="g1" class="glide">
+                        <div class="glide__track" data-glide-el="track">
+                          <ul class="glide__slides">
+                            <li class="glide__slide"><img src="images/Criticove/persona1.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/Criticove/persona2.png" alt=""></li>
+                            <li class="glide__slide"><img src="images/Criticove/persona3.png" alt=""></li>
+                          </ul>
+                        </div>
+                        <div data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">&lt;</button>
+                            <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">&gt;</button>                
+                        </div>
+                        <div class="glide__bullets" data-glide-el="controls[nav]">
+                            <button class="glide__bullet" data-glide-dir="=0"></button>
+                            <button class="glide__bullet" data-glide-dir="=1"></button>
+                            <button class="glide__bullet" data-glide-dir="=2"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="right">
+                    <p>We devised three user personas that represent our target audience to get a better understanding of what features </p>
+                    <ul>
+                        <li><p>Eddy represents young adults that want to share their latest reviews and see what their friends may have enjoyed recently. He may also use a platform like ours for something like a book club where reviewing books is a reccuring event.</p></li>
+                        <li><p>Meriem represents more introverted people that may not want to share anything but instead want to keep a record of what they have consummed recently. Seeing when they watched a certain movie and what they thought of it at the time may prove useful to such people.</p></li>
+                        <li><p>Kevin represents busier people that still want a way to connect with friends and family deespite their schedule. They may not post a lot themselves, but still want to see what their loved ones enjoyed.</p></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <h3>The Design</h3>
+            <h4>Storyboards and sketches</h4>
+            <p>In preparation for the prototyping process, I created some sotryboards and sketches, of which I selected some to showcase below</p>
+            <div id="gallery">
+                <img src="images/Criticove/Storyboard1.png" alt="">
+                <img src="images/Criticove/Storyboard1.png" alt="">
+                <img src="images/Criticove/Sketches.png" alt="">
+            </div>
+
+            <h4>Prototyping</h4>
+            <p>After some sketching, we moved on to wireframing and prototyping out app.</p>
+            <p>Because we want to foster creativity and offer a space for users to reflect and share reviews with no judgement, we prioritized a cool color palette and rounded shapes. In addition, we picked a non-serif font that also has more rounded edges. To keep with the theme of the "cove", we wanted to evoke water by choosing shades of blue with hints of yellow for the sun.</p>
+            
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        const gl1 = new Glide('#g1')
+        // const gl2 = new Glide('#g2')
+        // const gl3 = new Glide('#g3')
+
+        gl1.mount();
+        // gl2.mount();
+        // gl3.mount();
+    </script>
 </body>
 </html>
