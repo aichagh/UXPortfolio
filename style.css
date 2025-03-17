@@ -270,6 +270,18 @@ h4 {
     gap: 16px;
 }
 
+.hyperlink {
+    font-family: "Gantari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--violet);
+}
+
+.hyperlink:hover {
+    text-decoration: underline var(--violet) 2px;
+}
+
 /* medium screen */
 
 @media (max-width: 1200px) {
