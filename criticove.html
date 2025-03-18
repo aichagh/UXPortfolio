@@ -75,9 +75,16 @@
             <h4>Storyboards and sketches</h4>
             <p>In preparation for the prototyping process, I created some sotryboards and sketches, of which I selected some to showcase below</p>
             <div id="gallery">
-                <img src="images/Criticove/Storyboard1.png" alt="">
-                <img src="images/Criticove/Storyboard2.png" alt="">
-                <img src="images/Criticove/Sketches.png" alt="">
+                <button class="img-button" onclick="on('images/Criticove/Storyboard1.png')">
+                    <img src="images/Criticove/Storyboard1.png" alt="">
+                </button>
+                <div id="overlay"></div>
+                <button class="img-button" onclick="on('images/Criticove/Storyboard2.png')">
+                    <img src="images/Criticove/Storyboard2.png" alt="">
+                </button>             
+                <button class="img-button" onclick="on('images/Criticove/Sketches.png')">
+                    <img src="images/Criticove/Sketches.png" alt="">
+                </button>
             </div>
 
             <h4>Low-Fidelity Prototyping</h4>
@@ -136,6 +143,17 @@
         gl1.mount();
         gl2.mount();
         // gl3.mount();
+
+        function on(img) {
+            let overlay = document.getElementById("overlay");
+            overlay.style.display = "block";
+            overlay.insertAdjacentHTML("afterbegin", `                    <div id="overlay-center"><div id="align-right"><button onclick="off()">Close</button></div><img src="${img}" alt=""></div>`)
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+            window.location.reload();
+        }
     </script>
 </body>
 </html>
