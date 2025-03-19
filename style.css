@@ -163,6 +163,7 @@ h4 {
 
 #content {
     width: 60vw;
+    padding-bottom: 25%;
 }
 
 #wrapper-center {
@@ -208,9 +209,17 @@ h4 {
     align-items: center;
 }
 
-#g3, #g4 {
+#g3, #g4, #small {
     width: 30%;
     align-items: center;
+}
+
+#short {
+    height: 60vh;
+}
+
+#short>#my-video {
+    height: 60vh;
 }
 
 #center {
@@ -328,15 +337,15 @@ h4 {
     color: white;
     background-color: var(--violet);
   }
-
-  button:hover {
-    background-color: black;
-  }
   
   #align-right {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+  }
+
+  .img-button {
+    background-color:hsla(0, 0%, 100%, 0);
   }
 
 /* medium screen */

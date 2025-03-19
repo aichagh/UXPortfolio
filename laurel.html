@@ -13,6 +13,7 @@
     <!-- Required Core Stylesheet -->
     <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.theme.min.css">
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
 </head>
 <body>
     <div id="Navbar">
@@ -112,10 +113,18 @@
             </ul>
             <p>For each feature, we drew sketches, designed a storyboard, and user flow diagrams. Below are the artifacts from the feature I personally worked on: Progress Tracking.</p>
             <div id="gallery">
-                <img src="images/laurel/sketches.png" alt="">
-                <img src="images/laurel/storyboard.png" alt="">
-                <img src="images/laurel/flow.png" alt="">
+                <button class="img-button" onclick="on('images/laurel/sketches.png')">
+                    <img src="images/laurel/sketches.png" alt="">
+                </button>
+                <button class="img-button" onclick="on('images/laurel/storyboard.png')">
+                    <img src="images/laurel/storyboard.png" alt="">
+                </button>                
+                <button class="img-button" onclick="on('images/laurel/flow.png')">
+                    <img src="images/laurel/flow.png" alt="">
+                </button>
             </div>
+
+            <div id="overlay"></div>
             
             <h4>Wireframing</h4>
             <p>The next step was for us to create our wireframes. I included the finalized wireframe we arrived at for the feature I worked on. In the process of transitioning from paper to digital, the feature was broken down into two steps for the user to choose from a list of AI suggested metrics or add a custom metric, and to choose their preferred display style. There was also the addition of a Goal Details page for the user to see the newly added information.</p>
@@ -139,12 +148,89 @@
             <h4>High-Fidelity Protoyping</h4>
             <p>In the high-fidelity iteration of our design, we made the user suggested changes previously mentioned. We also added color-coded tags to show error messages and indicate success or failure of user actions. Additionally, upon analyzing our low-fidelity prototype from the lens of Gestalt principles and conventional mobile navigation patterns, we felt the Goals List and the Goal Details pages of the app needed to be redesigned to create better visual structure.</p>
             <p>As part of the redesign of the Goals List page, we changed the page title to My Goals for personalization, and reduced the amount of information in individual goal cards to give the design more breathing room. We also removed the hamburger navigation with the rationale that our app did not require many navigation options. Instead, we made information components on the screen directly interactive and housed any remaining settings with the addition of a profile icon and profile functionality.</p>
-            <p>insert img</p>
+            
+            <div id="center">
+                <div id="small">
+                    <button class="img-button" onclick="on('images/laurel/fsc-redo-1.png')">
+                        <img src="images/laurel/fsc-redo-1.png" alt="">
+                    </button>
+                </div>
+    
+            </div>
+
+
             <p>As part of the redesign of the Goals Detail page, we changed the page title to reflect the theme of the associated goal (e.g. Weight Loss). Additionally, we felt including all the information related to a goal on a single page was too crowded. Thus, we separated the different categories of information onto separate pages and we added a sticky tab bar to allow the user to navigate between the different categories. We kept the landing page/Goals List page accessible from the Goal Details page by adding a home icon in the screen header.</p>
-            <p>insert img</p>
+            
+            <div id="center">
+                <div id="small">
+                    <button class="img-button" onclick="on('images/laurel/fsc-redo-2.png')">
+                        <img src="images/laurel/fsc-redo-2.png" alt="">
+                    </button>
+                </div>
+            </div>
+
+
             <p>In addition to functional design changes, we also focused heavily on stylistic decisions at this stage. We created a design system with a dedicated colour scheme, typography and UI components to form the branding of our app. We chose a more rounded font, components with rounded edges, and colors such as blue and purple and grey to create a less aggressive and softer aesthetic. We used negative spacing, symmetry, and varying font sizes to create a visual structure that conveyed the intended information grouping on screens. This design intends to make the task of goal setting less daunting.</p>
             <p>The figure below shows the initial version of our high-fidelity prototype with the aforementioned changes and design decisions.</p>
-            <p>insert img</p>
+            
+            <div id="center">
+                <div id="g3" class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc1.webp')">
+                                <img src="images/laurel/fsc1.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc2.webp')">
+                                <img src="images/laurel/fsc2.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc3.webp')">
+                                <img src="images/laurel/fsc3.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc4.webp')">
+                                <img src="images/laurel/fsc4.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc5.webp')">
+                                <img src="images/laurel/fsc5.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc6.webp')">
+                                <img src="images/laurel/fsc6.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc7.webp')">
+                                <img src="images/laurel/fsc7.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc8.webp')">
+                                <img src="images/laurel/fsc8.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc9.webp')">
+                                <img src="images/laurel/fsc9.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc10.webp')">
+                                <img src="images/laurel/fsc10.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc11.webp')">
+                                <img src="images/laurel/fsc11.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc12.webp')">
+                                <img src="images/laurel/fsc12.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc13.webp')">
+                                <img src="images/laurel/fsc13.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc14.webp')">
+                                <img src="images/laurel/fsc14.webp" alt="">
+                            </button></li>
+                            <li class="glide__slide">                <button class="img-button" onclick="on('images/laurel/fsc15.webp')">
+                                <img src="images/laurel/fsc15.webp" alt="">
+                            </button></li>
+                        </ul>
+                    </div>
+                    <div data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">&lt;</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">&gt;</button>                
+                    </div>
+                </div>
+            </div>
+
             <p>To evaluate the usability of our high-fidelity prototype and our design assumptions, we conducted two heuristic evaluations and a cognitive walkthrough.</p>
             <p>For the heuristic evaluation, we instructed the evaluators to focus on the following Nielsen heuristics in their evaluation: visibility of system status, user control and freedom, consistency and standards, error prevention, and aesthetic and minimal design.</p>
             <p>For both evaluations, we used the two user tasks from the low-fidelity prototype user tests and a new login task as three-scenario based tasks for the evaluations. These tasks were used as they targeted the core functionality of the app and exposed evaluators to all its screens, allowing them to conduct a complete aesthetic and functional evaluation.</p>
@@ -159,32 +245,25 @@
             <p>In response to the results from our high-fidelity prototype evaluations, we made a number of modifications to arrive at the final iteration of our design aside from minor cosmetic and aesthetic fixes.</p>
             <p>We removed the blended navigation pattern in our design to restore navigational consistency across features. The Add Goal feature now displays its Back and Next or Done buttons in the screen header which is consistent with the New Metric feature. Also, the Next or Done buttons only appear once the user finishes entering input or appear immediately when a step is optional to give clear user feedback that a step is complete and so the user has the freedom to confirm their inputs/selections before the user can progress to the next step. Also, to align with design standards for selectable options, any single-select options in the Add Goal or New Metric feature that were previously using checkboxes have been replaced with radio buttons.</p>
             <p>Additionally, the profile icon now appears on all screens of the app (except the Add Goal feature to indicate the app is in a special state at that stage), and it replaces the home icon on the Goal Details page. To replace the functionality of the home icon, the tab bar has been updated to include a ‘Home’ option for improved user control and freedom, and also to remove features not implemented in this iteration of our prototype for more minimal design.</p>
-            <p>Some screens from the complete prototype with mentioned changes are shown below.</p>
-            <div id="center">
-                <div id="g3" class="glide">
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides">
-                            <li class="glide__slide"><img src="images/laurel/fsc1.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc2.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc3.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc4.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc5.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc6.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc7.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc8.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc9.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc10.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc11.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc12.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc13.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc14.webp" alt=""></li>
-                            <li class="glide__slide"><img src="images/laurel/fsc15.webp" alt=""></li>
-                        </ul>
-                    </div>
-                    <div data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">&lt;</button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">&gt;</button>                
-                    </div>
+            
+            <div id="wrapper-center">
+                <div id="short">
+                    <video
+                    id="my-video"
+                    class="video-js"
+                    controls
+                    preload="auto"
+                    width="800px"
+                    poster="images/laurel/fsc1.webp"
+                    data-setup="{}"
+                  >
+                    <source src="videos/laurel/laurel-demo.mp4" type="video/mp4" />
+                    <!-- <source src="MY_VIDEO.webm" type="video/webm" /> -->
+                    <p class="vjs-no-js">
+                      To view this video please enable JavaScript, and consider upgrading to a web browser that
+                      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                    </p>
+                  </video>
                 </div>
             </div>
 
@@ -192,8 +271,6 @@
             <p>Working through the design thinking process we gained several insights about user assumptions and design principles.</p>
             <p>For example, during user interviews in the Empathize phase we were surprised to learn that users did not have much interest in sharing their goals and progress with their peers even though this is a crucial part of effective goal setting. Hence we discovered that while scientific theory gives the best framework for the processes you want to design in your product, as a designer you cannot assume that users preferences and desired behavior will align with the ideal scenario. Instead, you must be open to and be prepared to adapt your design to actual user feedback. Additionally, during the prototyping process we were surprised to see that our blended navigation pattern created more confusion for users rather than the clear user experience we intended. We learned that although we are in a technology driven age where the general population are avid technology users, not every user interface is immediately intuitive. Thus, it is crucial for effective design to rely on sound design principles such as the use of signifiers and Gestalt principles to create visual structure and user flows that is consistent with their assumptions about user interface and results in the intended interactions.</p>
             <p>Reflecting on the limitations of our design, we realize we still have not discovered a design approach or feature that would make it enjoyable for users to share their goals and goal process with other users. In our opinion, incorporating a feature that creates a community aspect would be beneficial for our app as it would increase exposure and engagement, and it allows a better chance of success to achieve their goals, which would increase user satisfaction. Overall, our vision is that Laurel will not only help people with the schedule and management aspect of goal planning but also improves users’ self-confidence and productivity by increasing their consistency and effectiveness in achieving their goals. Once they realize their capabilities, we hope this would allow users to improve themselves and the world around them.</p>
-
-            <p>Link to the full design process</p>
         </div>
     </div>
 
@@ -206,6 +283,17 @@
         gl1.mount();
         gl2.mount();
         gl3.mount();
+
+        function on(img) {
+            let overlay = document.getElementById("overlay");
+            overlay.style.display = "block";
+            overlay.insertAdjacentHTML("afterbegin", `                    <div id="overlay-center"><div id="align-right"><button onclick="off()">Close</button></div><img src="${img}" alt=""></div>`)
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+            window.location.reload();
+        }
     </script>
 </body>
 </html>
