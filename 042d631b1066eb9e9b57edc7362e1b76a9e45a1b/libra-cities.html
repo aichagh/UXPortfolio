@@ -63,7 +63,7 @@
             
             <h4>Drone Operations</h4>
             
-            <p>For this page, I created a simple list allowing users to look at all drone operations. To ensure users see them, I made the text of unauthorized drone detection red as it contrasts well with the background (and is a common warning color). Normal operations are represented with black text. I added a "status" item in the list. To make them stand-out, on-going operations have a green "Ongoing" status with a green circle, while complete ones are represented in grery with a check mark.</p>
+            <p>For this page, I created a simple list allowing users to look at all drone operations. To ensure users see them, I made the text of unauthorized drone detection red as it contrasts well with the background (and is a common warning color). Normal operations are represented with black text. I added a "status" item in the list. To make them stand-out, on-going operations have a green <b>Ongoing</b> status with a green circle, while complete ones are represented in grey with a check mark.</p>
 
             <button class="img-button" onclick="on('images/droneop.png')">
                 <img src="images/droneop.PNG" alt="">
@@ -77,7 +77,7 @@
             
             <h4>AI Assistant</h4>
 
-            <p>This page allows users to interact directly with the AI-assistant. The retactable panel on the left show the query history while the right one shows exmaple commands and a textfield to manually type at the bottom. We decided on green for the example commands to make it clear to user they are clickable (as buttons are green in this design system). This color also allows them to standout from the backgroud by having better contrast.  </p>
+            <p>This page allows users to interact directly with the AI-assistant. The retactable panel on the left show the query history while the right one shows exmaple commands and a textfield to manually type at the bottom. We decided on green for the example commands to make it clear to user they are clickable (as buttons are green in this design system). This color also allows them to standout from the backgroud by having a higher contrast.</p>
 
             <button class="img-button" onclick="on('images/assist.png')">
                 <img src="images/assist.PNG" alt="">
@@ -85,11 +85,35 @@
             
             <h4>Teams</h4>
 
+            <p>This page allows users to edit the different AI teams used throughout the app to their liking. Each team has Agents within. Teams can be enabled and disabled as needed. They are categorized using the tags in the scrollable bar at the top.</p>
+
             <button class="img-button" onclick="on('images/teams.png')">
                 <img src="images/teams.PNG" alt="">
             </button>
             
             <h4>Analysis & Reports</h4>
+
+            <p>For this page, we decided to break it down in 5 tabs:</p>
+            <ul>
+              <li><p>Overview</p></li>
+              <li><p>Revenue</p></li>
+              <li><p>Drone Operations</p></li>
+              <li><p>Network Performance</p></li>
+              <li><p>Weather Impact</p></li>
+            </ul>
+
+            <p>For each tab, users can use a dropdwon menu to choose the specific location they want to view information for.</p>
+
+            <p>The <b>Revenue</b> tab features wiegets pertaining to money made from drone operations. I chose to organize information by designining one primary large customizable widget. Users can tweak 3 paramters using the dropdown menus at the top: the source of income, the time period and whether it's net profit or revenue. The generated graph is a bar graph tailored to their specific needs.</p>
+
+            <p>The <b>Drone Operations</b> tab allows users to view trends in their recent operations. the <b>Daily Flights</b> and <b>Current Operations</b> widgets can be customized to only pull data from a certain type of operation (e.g. UAM flights). The <b>Monthly Drone Operations per Type</b> widget shows a breakdown of the number of operations, as the title says, per month and type. upon hovering a segment of a bar on the graph, more details can be obtained. I made sure to sue colors that contrasted enough from one another while remaining within the dedicated color palette. The <b>Real Time Map</b> is a heat map showing where opearations are currently concentrated.</p>
+
+            <p>The <b>Network Performance</b> tab shows information on network usage. The <b>Average Weekly Users</b> widget allows users to view a line graph of the evolution of users over a chosen period of time for a particular carrier. The paramters can, as usual, be chosen a the top. The <b>Number of Users per Provider</b> widget is self-explanatory; designing it did prove challenging however. Choosing shades of green that contrasted enough, fit within the color palette, and still stood out from one another when overlaping took some trial and error, but I eventually settled on the 3 shades shown in the prototype.</p>
+
+            <p>The <b>Weather Impact</b> page shows weather information, as it may impact flights for drone. I decided to have both a <b>Weather Alert</b> and <b>Weather Forecast</b> widget, as I felt they served different purposes. The <b>Weather Alert</b> widget is placed at the top left, as it is the natural reading direction for english readers, meaning it will be seen first. This is important as weather alerts are often critical information that can heavily impact drone flights. The <b>Weather Forecast</b> widget gives a more general overview of the weather for every day of the selected period.The <b>Assistant Reports</b> widget gives a list of reports generated by the AI-Assitant detailing prevention methods in case of extreme weather conditions and summaries of past incidents involving extreme weather.</p>
+
+            <p>Finally, the <b>Overview</b> tab, as the title indicates, gives an overview of all the aformentioned information. It includes at least one widget from each category so users can, at a glance, have an understanding of current trends and events.</p>
+
             <div id="wrapper-center">
                 <video
                 id="my-video"
