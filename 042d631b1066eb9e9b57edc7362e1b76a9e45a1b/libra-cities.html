@@ -44,21 +44,50 @@
             <p>This app comprises of the following pages:</p>
             <ul>
                 <li><p>Dashboard</p></li>
-                <li><p>Event List</p></li>
+                <li><p>Drone Operations</p></li>
                 <li><p>AI Assistant</p></li>
-                <li><p>AI Teams</p></li>
+                <li><p>Teams</p></li>
                 <li><p>Analysis & Reports</p></li>
             </ul>
             <p>I will mostly focus on the Analysis & Reports page, as it is the most developed of the pages and required the most components to be created from scratch.</p>
             
+            <div id="overlay"></div>
+
             <h4>Dashboard</h4>
-            <p>This page was mostly my Senior's work, namely the map portion. I did however create the [insert name of the polygon thing].</p>
+            <p>This page was mostly my Senior's work, namely the map portion. I did however create the Telecommunication tab.</p>
+            <p>For that page, the goal was to allow users to create an area on the map where they want to generate a predicition. To do so, I created a pop-up window to walk users through the process. I chose to break it down in two steps: first, creating the polygon by drawing vertices on the map, then choosing the paramters they want for their prediction. The polygon drawing portion allows users to move aroudnt the map using the grab tool, drawing vertices, and deleting them. The second portion allows customization. Once a prediction is generated, users can click them again to edit them or delete them.</p>
+
+            <button class="img-button" onclick="on('images/dash2.png')">
+                <img src="images/dash2.PNG" alt="">
+            </button>
             
-            <h4>Event List</h4>
+            <h4>Drone Operations</h4>
+            
+            <p>For this page, I created a simple list allowing users to look at all drone operations. To ensure users see them, I made the text of unauthorized drone detection red as it contrasts well with the background (and is a common warning color). Normal operations are represented with black text. I added a "status" item in the list. To make them stand-out, on-going operations have a green "Ongoing" status with a green circle, while complete ones are represented in grery with a check mark.</p>
+
+            <button class="img-button" onclick="on('images/droneop.png')">
+                <img src="images/droneop.PNG" alt="">
+            </button>
+
+            <p>When a list item is selected, the details page comes up. It displays the trajectory of the drone and some details about the operation on the left and notes of the right. The latter includes notes from staff as well as AI-generated ones detailing all events that occured during the operation.</p>
+
+            <button class="img-button" onclick="on('images/droneopdetails.png')">
+                <img src="images/droneopdetails.PNG" alt="">
+            </button>
             
             <h4>AI Assistant</h4>
+
+            <p>This page allows users to interact directly with the AI-assistant. The retactable panel on the left show the query history while the right one shows exmaple commands and a textfield to manually type at the bottom. We decided on green for the example commands to make it clear to user they are clickable (as buttons are green in this design system). This color also allows them to standout from the backgroud by having better contrast.  </p>
+
+            <button class="img-button" onclick="on('images/assist.png')">
+                <img src="images/assist.PNG" alt="">
+            </button>
             
-            <h4>AI Teams</h4>
+            <h4>Teams</h4>
+
+            <button class="img-button" onclick="on('images/teams.png')">
+                <img src="images/teams.PNG" alt="">
+            </button>
             
             <h4>Analysis & Reports</h4>
             <div id="wrapper-center">
@@ -68,7 +97,7 @@
                 controls
                 preload="auto"
                 width="800px"
-                poster="../images/cities-cover.png"
+                poster="images/ana.PNG"
                 data-setup="{}"
               >
                 <source src="videos/Analysis and reports.mp4" type="video/mp4" />
@@ -79,8 +108,44 @@
                 </p>
               </video>
             </div>
+            
+            <h3>Demo</h3>
+
+            <div id="wrapper-center">
+                <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                width="800px"
+                poster="../images/cities-cover.png"
+                data-setup="{}"
+              >
+                <source src="videos/full-demo.mp4" type="video/mp4" />
+                <!-- <source src="MY_VIDEO.webm" type="video/webm" /> -->
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a web browser that
+                  <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+              </video>
+            </div>
+
         
           <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+
+          <script>
+            
+        function on(img) {
+            let overlay = document.getElementById("overlay");
+            overlay.style.display = "block";
+            overlay.insertAdjacentHTML("afterbegin", `                    <div id="overlay-center"><div id="align-right"><button onclick="off()">Close</button></div><img src="${img}" alt=""></div>`)
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+            window.location.reload();
+        }
+          </script>
             <p></p>
         </div>
     </div>
