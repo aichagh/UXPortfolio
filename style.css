@@ -348,6 +348,52 @@ h4 {
     background-color:hsla(0, 0%, 100%, 0);
   }
 
+#home-card {
+    height: 75vh;
+    background-image: linear-gradient(var(--off-white), var(--ocre));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+#about {
+    font-family: "Gantari", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: larger;
+}
+
+#illust {
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    flex-basis: 50%;
+}
+
+.about-illust {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-basis: 50%;
+}
+
+
+#about-split {
+    display: flex;
+    flex-direction: row;
+
+}
+
 /* medium screen */
 
 @media (max-width: 1200px) {
@@ -400,6 +446,22 @@ h4 {
         margin: 0;
         border: 0;
     }
+
+    #illust {
+        width: 50vw;
+    }
+
+    .about-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #about-split {
+        flex-direction: column;
+    }
+    
 }
 
 /* small screen */
@@ -428,6 +490,10 @@ h4 {
         display: flex;
         flex-direction: column;
 
+    }
+
+    #illust {
+        width: 75vw;
     }
     
 }
