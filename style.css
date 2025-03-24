@@ -391,7 +391,28 @@ h4 {
 #about-split {
     display: flex;
     flex-direction: row;
+}
 
+#ft-card>#split>#left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-basis: 60%;
+    gap: 8px;
+}
+
+#ft-card>#split>#right {
+    flex-basis: 40%;
+}
+
+#ft-card>#split>#right>img {
+    max-width: 500px;
+    box-shadow: 2px 2px 8px hsla(0, 0%, 50%, 0.26);
+}
+
+#ft-card {
+    padding: 10%;
 }
 
 /* medium screen */
@@ -461,6 +482,18 @@ h4 {
     #about-split {
         flex-direction: column;
     }
+
+    #ft-card>#split>#left, #ft-card>#split>#right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #ft-card>#split {
+        gap: 24px;
+    }
+    
     
 }
 
